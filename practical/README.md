@@ -1,13 +1,13 @@
 # README.md
 
-- Last modified: 2026-05-06 14:17:51
+- Last modified: 2026-05-06 16:07:37
 - Sign: nylander
 
 ## Description
 
 [practical-presentation.md](practical-presentation.md) -- Presentation in markdown format.
 
-Compile to PDF:
+Compile to PDF (pandoc beamer):
 
 ```
 $ pandoc \

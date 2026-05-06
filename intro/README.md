@@ -1,13 +1,13 @@
 # README.md
 
-- Last modified: 2026-05-06 13:39:45
+- Last modified: 2026-05-06 16:07:10
 - Sign: nylander
 
 ## Description
 
 [intro-presentation.md](intro-presentation.md) -- Presentation in markdown format.
 
-Compile to PDF:
+Compile to PDF (pandoc beamer):
 
 ```
 $ pandoc \
