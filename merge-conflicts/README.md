@@ -1,6 +1,6 @@
-# Handling *simple* merge conflicts
+# Handling simple merge conflicts
 
-- Last modified: 2026-05-06 13:43:05
+- Last modified: 2026-05-07 09:29:35
 - Sign: nylander
 
 ## Files
