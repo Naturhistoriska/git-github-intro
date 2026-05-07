@@ -1,26 +1,40 @@
 ---
 author: Johan Nylander
-title: An interactive introduction to `git` and [github](https://github.com)
+title: An interactive introduction to git and github
 classoption:
 - aspectratio=169
 ---
 
-# git topics to cover (including creating repos on github)
+# git topics (including creating repository on github)
 
 - [ ] Clone
 - [ ] Initialize
-- [ ] Add
-- [ ] Commit
+- [ ] Add \& Commit
+- [ ] Specify Remote
 - [ ] Push
-- [ ] Fetch
-- [ ] Pull
-- [ ] Branch
-- [ ] Merge
-- [ ] Restore
+- [ ] Fetch \& Pull
+- [ ] Branch \& Merge
+- [ ] "Undo"
 
 ---
 
-# Setup 1. Clone repository with this presentation and other material from github.com
+# Examples are run from a terminal window[^1]
+
+\large
+If you see a dollar sign on a white background, that's when you start typing :-)
+
+For example:
+
+&nbsp;
+
+```
+$ git --version
+```
+[^1]: I use bash. If you don't have it, don't worry!
+
+---
+
+# Setup 1. Clone repository with this presentation and other material
 
 \large
 ```
@@ -39,16 +53,16 @@ $ git clone https://github.com/Naturhistoriska/git-github-intro.git
 
 ---
 
-# Setup 2: Folder structure
+# Setup 3: Folder structure (make sure you can change directory!)
 
 ```
 $ cd myproj
-$ tree
 ```
 
 &nbsp;
 
-![tree](img/flow.1.png)
+\centering
+![flow](img/flow.1.png){width=90%}
 
 ---
 
@@ -60,19 +74,21 @@ $ git init
 
 &nbsp;
 
-![tree](img/flow.2.png)
+\centering
+![flow](img/flow.2.png){width=90%}
 
 ---
 
 # git workflow
 
 ```
-$ ls -la
+$ ls -a
 ```
 
 &nbsp;
 
-![tree](img/flow.3.png)
+\centering
+![flow](img/flow.3.png){width=80%}
 
 ---
 
@@ -84,7 +100,8 @@ $ ls .git
 
 &nbsp;
 
-![tree](img/flow.4.png)
+\centering
+![flow](img/flow.4.png){width=90%}
 
 ---
 
@@ -96,7 +113,8 @@ $ git status
 
 &nbsp;
 
-![tree](img/flow.5.png)
+\centering
+![flow](img/flow.5.png){width=90%}
 
 ---
 
@@ -116,7 +134,8 @@ $ git status
 
 &nbsp;
 
-![tree](img/flow.6.png)
+\centering
+![flow](img/flow.6.png){width=90%}
 
 ---
 
@@ -128,7 +147,8 @@ $ git commit -m "first commit"
 
 &nbsp;
 
-![tree](img/flow.7.png)
+\centering
+![flow](img/flow.7.png){width=90%}
 
 ---
 
@@ -140,13 +160,14 @@ $ git status
 
 &nbsp;
 
-![tree](img/flow.8.png)
+\centering
+![flow](img/flow.8.png){width=90%}
 
 ---
 
 # git workflow
 
-Add a [README.md file](../examples/download/README.md) in [markdown
+Add a README.md file[^2] in [markdown
 format](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 to your project
 
@@ -163,6 +184,8 @@ to your project
 Some description
 ```
 
+[^2]: Can be copied from `git-github-intro/examples/download/README.md`
+
 ---
 
 # git workflow
@@ -173,7 +196,8 @@ $ git status
 
 &nbsp;
 
-![tree](img/flow.9.png)
+\centering
+![flow](img/flow.9.png){width=90%}
 
 ---
 
@@ -188,13 +212,13 @@ $ git commit -m "added README.md"
 
 # git workflow
 
-**Edit some file**
+Edit a file (`apa.txt`)
 
 &nbsp;
 
-```
-$ echo "apa" >> apa.txt
-```
+\centering
+![edit apa.txt](img/edit-apa.txt.png){width=60%}
+
 
 ---
 
@@ -206,7 +230,8 @@ $ git status
 
 &nbsp;
 
-![tree](img/flow.10.png)
+\centering
+![flow](img/flow.10.png){width=90%}
 
 ---
 
@@ -229,19 +254,19 @@ $ git commit -m "message"
 
 ---
 
-# Create a `myproj` repository on github
+# Create a myproj repository on github
 
-- Open your private github page (`https://github.com/your-user-name`)
+1. Open your private github page (`https://github.com/your-user-name`)
 
-- Click on the "`plus sign -> Create new... -> New repository`" (upper right-hand corner)
+2. Click on the "`plus sign -> Create new... -> New repository`" (upper right-hand corner)
 
-- Add "`myproj`" as Repository name
+3. Add "`myproj`" as Repository name
 
-- Add a brief Description
+4. Add a brief Description
 
-- Choose visiblity "`Private`"
+5. Choose visiblity "`Private`"
 
-- Click on green button `Create repository`
+6. Click on green button `Create repository`
 
 ---
 
@@ -264,9 +289,28 @@ $ git push -u origin main
 &nbsp;
 
 ```
+$ git status
 $ git fetch
 $ git status
 $ git pull
+```
+
+---
+
+# Visit your myproj repository on github
+
+1. Edit some file by using the online editor (look for a pen symbol)
+
+2. Save the changes (this will automatically do `git add` and prompt for a `commit`-message)
+
+3. Go back you your local myproj repository and do
+
+```
+$ git status
+$ git fetch
+$ git status
+$ git pull
+
 ```
 
 ---
@@ -281,16 +325,17 @@ $ git push
 
 ---
 
-# So many commands
+# So many commands...
 
 \centering
-![](img/git.png){height=80%}
+![many commands](img/git.png){height=80%}
 
 ---
 
 # Branches
 
-![branching-gophers.png](img/branching-gophers.png){height=90%}
+\centering
+![branching-gophers.png](img/branching-gophers.png){height=80%}
 
 ---
 
@@ -302,7 +347,8 @@ $ git branch
 
 &nbsp;
 
-![tree](img/branch.1.png)
+\centering
+![branch](img/branch.1.png){width=90%}
 
 ---
 
@@ -315,7 +361,8 @@ $ git branch
 
 &nbsp;
 
-![tree](img/branch.2.png)
+\centering
+![branch](img/branch.2.png){width=90%}
 
 ---
 
@@ -327,7 +374,8 @@ $ git checkout myfeature
 
 &nbsp;
 
-![tree](img/branch.3.png)
+\centering
+![branch](img/branch.3.png){width=90%}
 
 ---
 
@@ -340,15 +388,23 @@ $ ls
 
 &nbsp;
 
-![tree](img/branch.4.png)
+\centering
+![branch](img/branch.4.png){width=90%}
 
 ---
 
 # git branch
 
-```
-$ echo "foo" > bar
-```
+Create a file (`bar`) with some content ("foo")[^3]
+
+&nbsp;
+
+\centering
+![create bar](img/bar.png){width=60%}
+
+&nbsp;
+
+[^3]: `$ echo "foo" > bar`
 
 ---
 
@@ -360,7 +416,7 @@ $ git status
 
 &nbsp;
 
-![tree](img/branch.5.png)
+![branch](img/branch.5.png){width=90%}
 
 ---
 
@@ -373,7 +429,8 @@ $ git commit -m "first commits on branch myfeature"
 
 &nbsp;
 
-![tree](img/branch.6.png)
+\centering
+![branch](img/branch.6.png){width=90%}
 
 ---
 
@@ -385,7 +442,8 @@ $ ls
 
 &nbsp;
 
-![tree](img/branch.7.png)
+\centering
+![branch](img/branch.7.png){width=90%}
 
 ---
 
@@ -397,7 +455,7 @@ $ git checkout main
 
 &nbsp;
 
-![tree](img/branch.8.png)
+![branch](img/branch.8.png){width=90%}
 
 ---
 
@@ -409,29 +467,31 @@ $ ls
 
 &nbsp;
 
-![tree](img/branch.9.png)
+\centering
+![branch](img/branch.9.png){width=90%}
 
 ---
 
 # Github branching workflow
 
-![workflow](img/github-workflow.png)
+\centering
+![workflow](img/github-workflow.png){width=90%}
 
 ---
 
 # Complications when branching
 
 \Large
-Since we created branch "banana", our "main" have diverged!
+Since we created branch **banana**, our **main** have diverged!
 
 &nbsp;
 
 \centering
-![](img/diverged-branch.png){width=80%}
+![diverged branch](img/diverged-branch.png){width=70%}
 
 ---
 
-# git branch-edit-testmerge-merge workflow[^1]
+# git branch-edit-testmerge-merge workflow[^4]
 
 ```
 $ git checkout -b myfix
@@ -447,56 +507,81 @@ $ git branch -d mymergetest
 $ git branch -d myfix
 ```
 
-[^1]: See separate exercise "merge-conflicts"!
+[^4]: See separate exercise ["merge-conflicts"](https://github.com/Naturhistoriska/git-github-intro/tree/main/merge-conflicts)
 
 ---
 
-# git undo/revert
+# git "undo"
 
-```
-$ echo "bpa" >> apa.txt
-$ git add apa.txt
-$ git commit -m "added bpa to apa.txt"
-```
+Add some content to `apa.txt`
 
----
-
-# git undo/revert
-
-Assume we wish to undo changes to file `apa.txt`
-
-- Either edit the file again (then `add` + `commit`),
-
-- or "go back" to the state of the file before the last commit (`git restore apa.txt`)
-
-- or see many more options [(link)](https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/)
-
-- and see here: <https://docs.gitlab.com/topics/git/undo/>
+\centering
+![edit apa.txt](img/edit-apa.txt-bpa.png){width=60%}
 
 ---
 
-# git undo/revert
+# git "undo"
 
-```
-$ git log
-```
+Assume we wish to undo changes to file `apa.txt`, but
+
+1. Have we saved the file?
+
+2. Have we staged the file?
+
+3. Have we made a commit?
+
+4. Have we made several commits?
+
+5. Do we wish to go back to an even older version?
+
+---
+
+# git "undo"
+
+Brute force (quick and simple)
 
 &nbsp;
 
-![tree](img/revert.1.png)
+- Edit the file again (then `add` + `commit`)
 
 ---
 
-# git undo/revert
+# git "undo"
 
-```
-$ git checkout b42276d27
-```
-
-or
+After staging (but before commit): [`restore`](https://git-scm.com/docs/git-restore)
 
 &nbsp;
 
 ```
-$ git reset b42276d27
+$ git restore --staged apa.txt
 ```
+
+---
+
+# git undo
+
+After commit: [`restore`](https://git-scm.com/docs/git-restore),
+[`reset`](https://git-scm.com/docs/git-reset), or
+[`checkout`](https://git-scm.com/docs/git-checkout). Use
+[`log`](https://git-scm.com/docs/git-log) to locate commits back in history.
+
+&nbsp;
+
+```
+$ git checkout <commit id> -- apa.txt
+```
+
+---
+
+# git undo
+
+- <https://docs.gitlab.com/topics/git/undo/>
+
+- <https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/>
+
+---
+
+# Try the merge-conflicts exercise?
+
+- <https://github.com/Naturhistoriska/git-github-intro/tree/main/merge-conflicts>
+
