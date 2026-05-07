@@ -1,15 +1,15 @@
 ---
 author: Johan Nylander
-title: A brief introduction to `git` and [github.com](https://github.com)
+title: A brief introduction to git and github
 classoption:
 - aspectratio=169
 ---
 
-# GIT = GITHUB?
-
+# git = github?
 
 \Large
 - [**git**](https://git-scm.com/) - is a version control software
+
 - [**github**](https://github.com) - is an online repository ([github.com](https://github.com))
 
 ---
@@ -249,7 +249,7 @@ $ git push
 # True power comes with "branches"
 
 \centering
-![branches](img/branching-gophers.png)
+![branches](img/branching-gophers.png){height=80%}
 
 ---
 
